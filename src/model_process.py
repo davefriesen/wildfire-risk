@@ -120,7 +120,7 @@ class ModelProcess:
             raise ValueError('%r not recognized' % dataset)
         if (self.X[dataset] is None) | (self.y[dataset] is None):
             raise ValueError('missing data')
-                                                    
+
         if (self.show_progress):
             print(self.name + ': ' + dataset + '...', end=' ')
         start = time()
