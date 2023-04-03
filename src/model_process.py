@@ -21,6 +21,10 @@ from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
 simplefilter("ignore", category=ConvergenceWarning)
 
+# Import balancing library
+from imblearn.over_sampling import SMOTE
+#from imblearn.over_sampling import RandomOverSampler
+
 # Import utility libraries
 from time import time
 
@@ -41,7 +45,8 @@ class ModelProcess:
                  X_val=None, y_val=None,
                  X_test=None, y_test=None,
                  classes=None,
-                 cat_cols=None, num_cols=None):
+                 cat_cols=None, num_cols=None,
+                 balance_target=False):
         self.algorithm = algorithm
         self.id = id
         self.params = params
@@ -56,7 +61,9 @@ class ModelProcess:
 
         self.cat_cols = cat_cols
         self.num_cols = num_cols
-        
+
+        self.balance_target = balance_target
+
         # Set descriptive model process name
         self.name = self.algorithm.__class__.__name__
         if id is not None:
@@ -124,10 +131,17 @@ class ModelProcess:
         if (self.show_progress):
             print(self.name + ': ' + dataset + '...', end=' ')
         start = time()
-        
+
         if dataset == 'train':
-            self.pipe.fit(self.X[dataset], np.ravel(self.y[dataset]))
-            
+            if self.balance_target:
+                smote = SMOTE(random_state=42)
+                self.preprocessor.fit(self.X[dataset])
+                X_preprocessed = self.preprocessor.transform(self.X[dataset])
+                X_resampled, y_resampled = smote.fit_resample(X_preprocessed, np.ravel(self.y[dataset]))
+                self.model.fit(X_resampled, y_resampled)
+            else:
+                self.pipe.fit(self.X[dataset], np.ravel(self.y[dataset]))
+
         self.pred[dataset] = self.pipe.predict(self.X[dataset])
         if is_classifier(self.algorithm):
             if hasattr(self.model, 'predict_proba'):
@@ -155,7 +169,7 @@ class ModelProcess:
     def train(self):
         self._ModelProcess__run('train')
         return self
-    
+
     def validate(self):
         self._ModelProcess__run('val')
         return self
