@@ -6,8 +6,21 @@ __GitHub: https://github.com/davefriesen/wildfire-risk__<br>
 #### -- Programming Languages: Python with cloud-based service AWS
 
 ## Overview
+EnviroTech DJK has been engaged to analyze and inform wildfire management throughout the Western United States including California, Oregon, and Washington. This engagement aims to understand underlying wildfire factors and identify high-risk scenarios to predict, prevent, and manage wildfire impact on communities and natural ecosystems.
 
-## Objectives
+## Goals
+* Identify key factors and relationships that lead to wildfires, for example through a risk-ranking system. 
+* Identify high-risk wildfire scenarios using these critical factors and location-based data. For example, generate binary fire/no-fire predictions based on the probability of wildfire outcome from proximate factors like forest conditions, weather, and terrain.
+* Create the basis for a reliable and resilient (cloud-based) alerting and monitoring system for wildfires.
+* Ultimately inform the reduction and mitigation of wildfire risk throughout the Western U.S.
+
+## Getting Started
+1. Clone the repo
+   ```sh
+   git clone https://github.com/davefriesen/wildfire-risk.git
+   ```
+2. Data is stored in the [data] folder within this repo (https://github.com/davefriesen/wildfire-risk/tree/main/data)
+3. Code and steps for this project are stored in the [src] folder within this repo (https://github.com/davefriesen/wildfire-risk/tree/main/src)
 
 ## References
 * National Oceanic and Atmospheric Administration (NOAA). (2023). Wildfire climate connection. https://www.noaa.gov/noaa-wildfire/wildfire-climate-connection
