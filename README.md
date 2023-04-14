@@ -21,12 +21,11 @@ The growing wildfire challenge in the Western United States presents a need and 
 * Ultimately inform the reduction and mitigation of wildfire risk throughout the Western U.S.
 
 ## Non-Goals
-This engagement will not include:
-●	Identifying the exact behavior for a wildfire (a next-step opportunity);
-●	Providing statutory or regulatory input to government officials;
-●	Considering controlled burns, e.g., coordinated with indigenous tribes;
-●	Providing information regarding fire suppression (best left to firefighters); or,
-●	Predicting or informing the environmental impact of wildfires.
+* Identifying the exact behavior for a wildfire (a next-step opportunity);
+* Providing statutory or regulatory input to government officials;
+* Considering controlled burns, e.g., coordinated with indigenous tribes;
+* Providing information regarding fire suppression (best left to firefighters); or,
+* Predicting or informing the environmental impact of wildfires.
 
 ## Getting Started
 1. Clone the repo
@@ -37,9 +36,9 @@ This engagement will not include:
 3. Code and steps for this project are stored in the [src] folder within this repo (https://github.com/davefriesen/wildfire-risk/tree/main/src)
 
 ## Data Sources
-●	Forest census data from the United States Forest Service’s (USFS) Forest Inventory and Analysis (FIA) Program (https://experience.arcgis.com/experience/3641cea45d614ab88791aef54f3a1849)
-●	Historical weather data from the National Oceanic and Atmospheric Administration (NOAA); ideally from NOAA’s Joint Polar Satellite System via AWS (https://registry.opendata.aws/noaa-jpss/) or, alternatively, from NOAA’s historical weather information (https://www.ncdc.noaa.gov/cdo-web/datasets)
-●	Historical wildfire data from the National Interagency Fire Center (NIFC) for select locations at a point in time (https://data-nifc.opendata.arcgis.com/maps/wildland-fire-incident-locations/)
+* Forest census data from the United States Forest Service’s (USFS) Forest Inventory and Analysis (FIA) Program (https://experience.arcgis.com/experience/3641cea45d614ab88791aef54f3a1849)
+* Historical weather data from the National Oceanic and Atmospheric Administration (NOAA); ideally from NOAA’s Joint Polar Satellite System via AWS (https://registry.opendata.aws/noaa-jpss/) or, alternatively, from NOAA’s historical weather information (https://www.ncdc.noaa.gov/cdo-web/datasets)
+* Historical wildfire data from the National Interagency Fire Center (NIFC) for select locations at a point in time (https://data-nifc.opendata.arcgis.com/maps/wildland-fire-incident-locations/)
 
 ## References
 * National Oceanic and Atmospheric Administration (NOAA). (2023). Wildfire climate connection. https://www.noaa.gov/noaa-wildfire/wildfire-climate-connection
