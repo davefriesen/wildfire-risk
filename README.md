@@ -34,6 +34,8 @@ The growing wildfire challenge in the Western United States presents a need and 
    ```
 2. Data is stored in the [data] folder within this repo (https://github.com/davefriesen/wildfire-risk/tree/main/data)
 3. Code and steps for this project are stored in the [src] folder within this repo (https://github.com/davefriesen/wildfire-risk/tree/main/src)
+4. Within the SRC folder run the files beginning with 01 to 06 in their names. In the instance where the files don't run, go back
+and run the files starting with 00. All other files should be left alone. 
 
 ## Data Sources
 * Forest census data from the United States Forest Service’s (USFS) Forest Inventory and Analysis (FIA) Program (https://experience.arcgis.com/experience/3641cea45d614ab88791aef54f3a1849)
